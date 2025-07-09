@@ -9,4 +9,5 @@ router.register(r'config', views.AIConfigurationViewSet, basename='ai-config')
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('test-connection/', views.test_ai_connection, name='test-ai-connection'),
 ]

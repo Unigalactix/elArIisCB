@@ -11,6 +11,14 @@ from .serializers import (
 from .services import AIService
 import uuid
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def test_ai_connection(request):
+    """Test AI service connection"""
+    ai_service = AIService()
+    result = ai_service.test_connection()
+    return Response(result)
+
 class ChatSessionViewSet(viewsets.ModelViewSet):
     serializer_class = ChatSessionSerializer
     permission_classes = [IsAuthenticated]

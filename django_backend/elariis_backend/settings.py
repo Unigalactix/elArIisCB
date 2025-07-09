@@ -155,6 +155,12 @@ CELERY_TIMEZONE = TIME_ZONE
 # OpenAI Configuration
 OPENAI_API_KEY = config('OPENAI_API_KEY', default='')
 
+# Azure OpenAI Configuration
+AZURE_OPENAI_API_KEY = config('AZURE_OPENAI_API_KEY', default='')
+AZURE_OPENAI_ENDPOINT = config('AZURE_OPENAI_ENDPOINT', default='')
+AZURE_OPENAI_API_VERSION = config('AZURE_OPENAI_API_VERSION', default='2024-02-15-preview')
+AZURE_OPENAI_DEPLOYMENT_NAME = config('AZURE_OPENAI_DEPLOYMENT_NAME', default='gpt-4')
+
 # Logging
 LOGGING = {
     'version': 1,
